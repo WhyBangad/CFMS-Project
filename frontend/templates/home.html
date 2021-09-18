@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block body %}
+<section>
+    <header>
+        <h1>Registered Complaints</h1>
+    </header>
+    <div class="card">
+        <div class="title">
+            <p>Title of complaint</p>
+        </div>
+        <div class="content">
+            <p>Content of complaint</p>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="card">
+        <h1>Want to register a complaint?</h1>
+        <form method="POST" action="" id="newComplaint">
+            <div class="form-field">
+                <label for="complaintTitle">
+                    <p>Complaint title:</p>
+                </label>
+                <input type="text" placeholder="Title..." id="complaintTitle">
+            </div>
+            <div class="form-field">
+                <label for="complaintContent">
+                    <p>Complaint:</p>
+                </label>
+                <textarea placeholder="Content..." id="complaintContent"></textarea>
+            </div>
+            <button type="submit">Submit complaint</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/landing.css' %}">
+{% endblock %}
+
+{% block body %}
+<section>
+    <div class="main-card">
+        <div class="title">
+            <h1>Customer Feedback Management System</h1>
+        </div>
+        <div class="signup-form">
+            <div class="choice">
+                <h1>Signup/Login</h1>
+            </div>
+            <form method="POST" action="">
+                <div class="form-field">
+                    <label for="user-email">
+                        <p>Email id:</p>
+                    </label>
+                    <input type="email" id="user-email" required>
+                </div>
+                <div class="form-field">
+                    <label for="user-password">
+                        <p>Password:</p>
+                    </label>
+                    <input type="password" id="user-password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+    
+</section>
+{% endblock %}

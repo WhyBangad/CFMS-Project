@@ -1,0 +1,45 @@
+:root{
+    --clr-blue: rgba(2, 150, 250, 1);
+    --clr-cont: rgba(70, 187, 223, 1);
+    --clr-white: hsla(206, 62%, 95%, 1);
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+}
+
+section{
+    background-color: var(--clr-blue);
+    padding: 8em 12em;
+}
+
+
+h1{
+    font-size: x-large;
+}
+
+p{
+    font-size: large;
+}
+
+form input{
+    border: 2px solid black;
+}
+
+form input:hover,
+form input:focus{
+    box-shadow: 0 0 0.5em var(--clr-blue);
+}
+
+button{
+    font-size: medium;
+    border-radius: 0.5em;
+    background-color: orange;
+    padding: 0.5em;
+}
