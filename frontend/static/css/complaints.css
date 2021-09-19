@@ -3,11 +3,19 @@ header h1{
     padding-bottom: 50px;
 }
 
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
 .card{
     width: 60vw;
     min-height: 20vh;
     background-color: var(--clr-cont);
-    margin: auto;
     border-radius: 1em;
     box-shadow: 5px 5px 0.5em var(--clr-white);
     display: flex;
