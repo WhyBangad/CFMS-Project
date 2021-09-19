@@ -1,4 +1,4 @@
-header h1{
+h1{
     text-align: center;
     padding-bottom: 50px;
 }
@@ -9,7 +9,7 @@ header h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2em;
+    gap: 1em;
 }
 
 .card{
@@ -18,12 +18,8 @@ header h1{
     background-color: var(--clr-cont);
     border-radius: 1em;
     box-shadow: 5px 5px 0.5em var(--clr-white);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
     padding: 2em;
+    margin: auto;
 }
 
 .title,

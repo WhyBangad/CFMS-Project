@@ -10,12 +10,10 @@
 
 {% if complaints %}
 <section>
-    <header>
-        <h1>Registered Complaints</h1>
-    </header>
+    <h1>Registered Complaints</h1>
     <div class="flex-col">
         {% for complaint in complaints %}
-        <div class="card">
+        <div class="card flex-col">
             <div class="title">
                 <p>{{ complaint.title }}</p>
             </div>
@@ -28,32 +26,30 @@
 </section>
 {% else %}
 <section>
-    <header>
-        <h1>You have no registered complaints...</h1>
-    </header>
+    <h1>You have no registered complaints...</h1>
 </section>
 {% endif %}
 <section>
-    <div class="flex-col">
-        <div class="card">
-            <h1>Want to register a complaint?</h1>
-            <form method="POST" action="{% url 'register' username %}" id="newComplaint">
-                {% csrf_token %}
-                <div class="form-field">
-                    <label for="complaintTitle">
-                        <p>Complaint title:</p>
-                    </label>
-                    <input type="text" placeholder="Title..." id="complaintTitle" name="title">
-                </div>
-                <div class="form-field">
-                    <label for="complaintContent">
-                        <p>Complaint:</p>
-                    </label>
-                    <textarea placeholder="Content..." id="complaintContent" name="content"></textarea>
-                </div>
-                <button type="submit">Submit complaint</button>
-            </form>
-        </div>
+    <h1>Want to register a complaint?</h1>
+    <div class="card flex-col">
+        <form method="POST" action="{% url 'register' username %}" id="newComplaint">
+            {% csrf_token %}
+            <div class="form-field">
+                <label for="complaintTitle">
+                    <p>Complaint title:</p>
+                </label>
+                <input type="text" placeholder="Title..." id="complaintTitle" name="title">
+            </div>
+            <div class="form-field">
+                <label for="complaintContent">
+                    <p>Complaint:</p>
+                </label>
+                <textarea placeholder="Content..." id="complaintContent" name="content"></textarea>
+            </div>
+            <button type="submit">
+                <p>Submit complaint</p>
+            </button>
+        </form>
     </div>
 </section>
 {% endblock %}

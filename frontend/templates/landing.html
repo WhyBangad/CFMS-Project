@@ -9,30 +9,26 @@
 {% block body %}
 <section>
     <div class="main-card">
-        <div class="title">
-            <h1>Customer Feedback Management System</h1>
-        </div>
-        <div class="signup-form">
+        <h1 class="title">Customer Feedback Management System</h1>
+        <form method="POST" action="{% url 'login' %}"  class="signup-form">
             <div class="choice">
                 <h1>Signup/Login</h1>
             </div>
-            <form method="POST" action="{% url 'login' %}">
-                {% csrf_token %}
-                <div class="form-field">
-                    <label for="user-email">
-                        <p>Email id:</p>
-                    </label>
-                    <input type="email" id="user-email" name="username" required>
-                </div>
-                <div class="form-field">
-                    <label for="user-password">
-                        <p>Password:</p>
-                    </label>
-                    <input type="password" id="user-password" name="password" required>
-                </div>
-                <button type="submit">Login</button>
-            </form>
-        </div>
+            {% csrf_token %}
+            <div class="form-entries">
+                <label for="user-email">
+                    <p>Email id:</p>
+                </label>
+                <input type="email" id="user-email" name="username" required>
+                <label for="user-password">
+                    <p>Password:</p>
+                </label>
+                <input type="password" id="user-password" name="password" required>
+            </div>
+            <button type="submit">
+                <p>Login</p>
+            </button>
+        </form>
     </div>
 </section>
 {% endblock %}
