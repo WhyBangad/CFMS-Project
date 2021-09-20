@@ -1,7 +1,10 @@
 :root{
-    --clr-blue: rgba(2, 150, 250, 1);
-    --clr-cont: rgba(70, 187, 223, 1);
-    --clr-white: hsla(206, 62%, 95%, 1);
+    --clr-blue: #0CAFFF;
+    /* #0CAFFF */
+    --clr-cont: #00BFFF;
+    /* #00BFFF */
+    --clr-white: #E9FCFC;
+    /* #E9FCFC */
 }
 
 *,
@@ -16,7 +19,7 @@
 
 section{
     background-color: var(--clr-blue);
-    padding: 8em 12em;
+    padding: 4em 6em;
 }
 
 
@@ -31,12 +34,16 @@ p{
     font-family: 'Archivo', sans-serif;
 }
 
-form input{
+input,
+textarea{
     border: 2px solid black;
+    border-radius: 0.3em;
 }
 
-form input:hover,
-form input:focus{
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus{
     box-shadow: 0 0 0.5em var(--clr-blue);
 }
 

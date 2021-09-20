@@ -17,9 +17,13 @@ h1{
     min-height: 20vh;
     background-color: var(--clr-cont);
     border-radius: 1em;
-    box-shadow: 5px 5px 0.5em var(--clr-white);
+    box-shadow: 5px 5px 0.5em black;
     padding: 2em;
     margin: auto;
+}
+
+.container{
+    gap: 3em;
 }
 
 .title,
@@ -55,4 +59,9 @@ h1{
     flex-wrap: wrap;
     gap: 1em;
     padding: 1em;
+}
+
+#complaintContent{
+    width: 20vw;
+    height: 10vh;
 }

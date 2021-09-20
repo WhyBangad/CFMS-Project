@@ -11,12 +11,14 @@
 {% if complaints %}
 <section>
     <h1>Registered Complaints</h1>
-    <div class="flex-col">
+    <div class="container flex-col">
         {% for complaint in complaints %}
         <div class="card flex-col">
+            <p>Title:</p>
             <div class="title">
                 <p>{{ complaint.title }}</p>
             </div>
+            <p>Complaint:</p>
             <div class="content">
                 <p>{{ complaint.content }}</p>
             </div>
@@ -30,7 +32,7 @@
 </section>
 {% endif %}
 <section>
-    <h1>Want to register a complaint?</h1>
+    <h1>Wish to register a complaint?</h1>
     <div class="card flex-col">
         <form method="POST" action="{% url 'register' username %}" id="newComplaint">
             {% csrf_token %}
