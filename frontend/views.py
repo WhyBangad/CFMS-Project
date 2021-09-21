@@ -7,11 +7,14 @@ def landing(request: HttpRequest):
 
 def login(request: HttpRequest):
     ''' Uses user account if it exists. Else, creates a new one.'''
-    user_data = request.POST.dict()
-    if not User.objects.filter(username=user_data['username']).exists():
-        obj = User(username=user_data['username'], password=user_data['password'])
-        obj.save()
-    return redirect('complaints', user_data['username'])
+    if request.method == 'POST':
+        user_data = request.POST.dict()
+        if not User.objects.filter(username=user_data['username']).exists():
+            obj = User(username=user_data['username'], password=user_data['password'])
+            obj.save()
+        return redirect('complaints', user_data['username'])
+    else:
+        return render(request, 'landing.html')
 
 def complaints(request: HttpRequest, username: str):
     user_complaints = Complaint.objects.filter(username=username)

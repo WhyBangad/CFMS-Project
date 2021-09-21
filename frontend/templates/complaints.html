@@ -12,11 +12,18 @@
     <div class="info flex-col">
         <div class="complaint-counter">
             <p>Complaints counter</p>
-            <span class="complaint-count">{{ count }}</span>
+            <span class="complaint-count">
+                <p>{{ count }}</p>
+            </span>
         </div>
         <a href="#register">
             <button class="register-btn">
                 <p>Register complaint</p>
+            </button>
+        </a>
+        <a href="{% url 'login' %}">
+            <button>
+                <p>Logout</p>
             </button>
         </a>
     </div>
@@ -42,8 +49,8 @@
 </section>
 <section>
     <h1>Wish to register a complaint?</h1>
-    <div class="card flex-col" id="register">
-        <form method="POST" action="{% url 'register' username %}" id="newComplaint">
+    <div class="card" id="register">
+        <form method="POST" action="{% url 'register' username %}" id="newComplaint" class="flex-col">
             {% csrf_token %}
             <div class="form-field">
                 <label for="complaintTitle">
@@ -55,7 +62,7 @@
                 <label for="complaintContent">
                     <p>Complaint:</p>
                 </label>
-                <textarea placeholder="Content..." id="complaintContent" name="content"></textarea>
+                <textarea placeholder="Complaint..." id="complaintContent" name="content"></textarea>
             </div>
             <button type="submit">
                 <p>Submit complaint</p>

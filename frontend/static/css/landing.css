@@ -29,10 +29,6 @@ section{
     background-color: var(--clr-white);
     height: 100%;
     width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 2em;
 }
 
@@ -41,9 +37,5 @@ section{
 }
 
 .form-entries{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 0.5em;
 }

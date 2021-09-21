@@ -10,12 +10,12 @@
 <section>
     <div class="main-card">
         <h1 class="title">Customer Feedback Management System</h1>
-        <form method="POST" action="{% url 'login' %}"  class="signup-form">
+        <form method="POST" action="{% url 'login' %}"  class="flex-col signup-form">
             <div class="choice">
                 <h1>Signup/Login</h1>
             </div>
             {% csrf_token %}
-            <div class="form-entries">
+            <div class="flex-col form-entries">
                 <label for="user-email">
                     <p>Email id:</p>
                 </label>
