@@ -20,11 +20,11 @@ def complaints(request: HttpRequest, username: str):
     context['complaints'] = []
     for complaint in user_complaints:
         context['complaints'].append({'title': complaint.title, 'content': complaint.content})
+    context['count'] = len(context['complaints'])
     return render(request, 'complaints.html', context)
 
 def register(request: HttpRequest, username: str):
     content = request.POST.dict()
-    print(content)
     user = User.objects.get(username=username)
     obj = Complaint(username=user, title=content['title'], content=content['content'])
     obj.save()

@@ -8,8 +8,19 @@
 
 {% block body %}
 
+<section id="complaints">
+    <div class="info flex-col">
+        <div class="complaint-counter">
+            <p>Complaints counter</p>
+            <span class="complaint-count">{{ count }}</span>
+        </div>
+        <a href="#register">
+            <button class="register-btn">
+                <p>Register complaint</p>
+            </button>
+        </a>
+    </div>
 {% if complaints %}
-<section>
     <h1>Registered Complaints</h1>
     <div class="container flex-col">
         {% for complaint in complaints %}
@@ -25,15 +36,13 @@
         </div>
         {% endfor %}
     </div>
-</section>
 {% else %}
-<section>
     <h1>You have no registered complaints...</h1>
-</section>
 {% endif %}
+</section>
 <section>
     <h1>Wish to register a complaint?</h1>
-    <div class="card flex-col">
+    <div class="card flex-col" id="register">
         <form method="POST" action="{% url 'register' username %}" id="newComplaint">
             {% csrf_token %}
             <div class="form-field">

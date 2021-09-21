@@ -17,6 +17,10 @@
     text-decoration: none;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 section{
     background-color: var(--clr-blue);
     padding: 4em 6em;

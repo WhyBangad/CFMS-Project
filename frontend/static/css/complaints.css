@@ -65,3 +65,23 @@ h1{
     width: 20vw;
     height: 10vh;
 }
+
+.info{
+    position: sticky;
+    top: 4em;
+    left: calc(100vw - 6em);
+    width: max-content;
+}
+
+.complaint-counter{
+    padding: 1em;
+    max-width: min-content;
+    background-color: var(--clr-white);
+    border-radius: 0.5em;
+    text-align: center;
+}
+
+.complaint-count{
+    text-align: center;
+    font-size: xx-large;
+}
