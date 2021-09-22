@@ -8,25 +8,26 @@
 
 {% block body %}
 
-<section id="complaints">
-    <div class="info flex-col">
-        <div class="complaint-counter">
-            <p>Complaints counter</p>
-            <span class="complaint-count">
-                <p>{{ count }}</p>
-            </span>
-        </div>
-        <a href="#register">
-            <button class="register-btn">
-                <p>Register complaint</p>
-            </button>
-        </a>
-        <a href="{% url 'login' %}">
-            <button>
-                <p>Logout</p>
-            </button>
-        </a>
+<div class="info flex-col">
+    <div class="complaint-counter">
+        <p>Complaints counter</p>
+        <span class="complaint-count">
+            <p>{{ count }}</p>
+        </span>
     </div>
+    <a href="#register">
+        <button class="register-btn">
+            <p>Register complaint</p>
+        </button>
+    </a>
+    <a href="{% url 'login' %}">
+        <button>
+            <p>Logout</p>
+        </button>
+    </a>
+</div>
+
+<section id="complaints">
 {% if complaints %}
     <h1>Registered Complaints</h1>
     <div class="container flex-col">

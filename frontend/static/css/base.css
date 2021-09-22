@@ -22,7 +22,6 @@ html{
 }
 
 section{
-    background-color: var(--clr-blue);
     padding: 4em 6em;
 }
 
@@ -42,6 +41,10 @@ input,
 textarea{
     border: 2px solid darkslategrey;
     border-radius: 0.3em;
+}
+
+body{
+    background-color: var(--clr-blue);
 }
 
 input:hover,

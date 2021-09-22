@@ -29,8 +29,8 @@ else:
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ["DJANGO_SECRET_KEY"]
 
-
 ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = [os.environ['EC2_IP']]
 
 
 # Application definition

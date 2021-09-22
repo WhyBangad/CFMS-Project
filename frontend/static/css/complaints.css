@@ -55,7 +55,7 @@ h1{
 .info{
     position: sticky;
     top: 4em;
-    left: calc(100vw - 6em);
+    left: calc(100vw - 15em);
     width: max-content;
 }
 
